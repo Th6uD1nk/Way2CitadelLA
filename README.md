@@ -12,7 +12,7 @@ This aims to facilitate security, compliance, and granular access management.
 - Enhanced traceability, each access can be logged and identified (who, what, when)
 - Automated onboarding/offboarding, centralized secret rotation: *new users automatically receive their access through their identity, and upon revocation, all access is instantly removed from a central point*
 
-The ideal goal would be to tend towards an open source system offering an alternative to Zero Trust type architectures: *providing an accessible solution for entities that want an open and transparent approach to security.*
+The ideal goal would be to tend towards an open source system that embraces Zero Trust philosophy while offering an open alternative to proprietary security solutions: providing an accessible solution for entities that want an open and transparent approach to security.
 
 ## Technical Architecture
 
@@ -60,6 +60,24 @@ Triggered only during changes to Citadel services/data. Synchronization between 
 
 ### Continuity
 Proxies are not immediately notified but discover changes during their next interaction, enabling a resilient and decoupled architecture.
+
+## Core Components
+
+- [w2cla-vault](https://github.com/mcidclan/w2cla-vault)  
+  The vault module responsible for secure key and secret storage.
+
+- w2cla-proxy-dedicated  
+  Dedicated proxy modules handling primary authentication and direct vault access.
+
+- w2cla-proxy-remote  
+  Remote proxies that access secrets via dedicated proxies, establishing a trust hierarchy.
+
+- w2cla-guardhouse  
+  The validation module centralizing user status, permissions, and revocation checks.
+
+- w2cla-citadel  
+  Hosts services and shared data within the organization, preserving user metadata for traceability.
+
 
 **Switch to other languages:**
 - [English Specification](/specs/spec.en.md)
