@@ -63,8 +63,14 @@ Proxies are not immediately notified but discover changes during their next inte
 
 ## Core Components
 
-- [w2cla-vault](https://github.com/Th6uD1nk/w2cla-vault)  
-  The vault module responsible for secure key and secret storage.
+- [w2cla-citadel](https://github.com/Th6uD1nk/w2cla-citadel)  
+  Hosts services and shared data within the organization, preserving user metadata for traceability.
+
+- [w2cla-guardhouse](https://github.com/Th6uD1nk/w2cla-guardhouse)  
+  The validation module centralizing user status, permissions, and revocation checks.
+
+- [w2cla-monitoring](https://github.com/Th6uD1nk/w2cla-monitoring)  
+  Centralized monitoring and observability for all W2CLA modules.
 
 - [w2cla-proxy-dedicated](https://github.com/Th6uD1nk/w2cla-proxy-dedicated)  
   Dedicated proxy modules handling primary authentication and direct vault access.
@@ -72,15 +78,5 @@ Proxies are not immediately notified but discover changes during their next inte
 - [w2cla-proxy-remote](https://github.com/Th6uD1nk/w2cla-proxy-remote)  
   Remote proxies that access secrets via dedicated proxies, establishing a trust hierarchy.
 
-- [w2cla-guardhouse](https://github.com/Th6uD1nk/w2cla-guardhouse)  
-  The validation module centralizing user status, permissions, and revocation checks.
-
-- [w2cla-citadel](https://github.com/Th6uD1nk/w2cla-citadel)  
-  Hosts services and shared data within the organization, preserving user metadata for traceability.
-
-- [w2cla-monitoring](https://github.com/Th6uD1nk/w2cla-monitoring)  
-  Centralized monitoring and observability for all W2CLA modules.
-
-**Switch to other languages:**
-- [Spécification française](readme.fr.md)
-
+- [w2cla-vault](https://github.com/Th6uD1nk/w2cla-vault)  
+  The vault module responsible for secure key and secret storage.
